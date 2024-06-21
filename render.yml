@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: coffee-app
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: PG_URL
+        fromDatabase:
+          name: coffee
+          property: connectionString
+databases:
+  - name: my-database
+    type: postgres
+    plan: free

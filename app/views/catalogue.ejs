@@ -1,0 +1,89 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<main>
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1>Notre Catalogue</h1>
+    </div>
+  </section>
+  <!-- Nouvelle section de présentation du catalogue -->
+  <section class="catalogue-presentation">
+    <div class="presentation-content">
+      <div class="presentation-image">
+        
+          <div class="presentation-images-grid">
+            <img
+              src="/images/grain.png"
+              alt="Coffee Image 1"
+            />
+            <img
+              src="/images/grain2.png"
+              alt="Coffee Image 2"
+            />
+            <img
+              src="/images/sac-coffee.png"
+              alt="Coffee Image 3"
+            />
+            <img
+              src="/images/sac-coffee.png"
+              alt="Coffee Image 3"
+            />
+            <img
+            src="/images/prez-tasse.jpg"
+            alt="Coffee Image 3"
+          />
+          <img
+            src="/images/prez-coffee.jpg"
+            alt="Coffee Image 3"
+          />
+          </div>
+      </div>
+      <div class="presentation-text">
+        <h2>Bienvenue dans notre Catalogue</h2>
+        <p class="presentation-description">
+          Découvrez une sélection exquise de nos meilleurs produits de café,
+          soigneusement sélectionnés pour satisfaire tous les amateurs de
+          café. Chaque produit est choisi pour sa qualité exceptionnelle et
+          ses saveurs uniques.
+        </p>
+        <p class="presentation-description">
+          Explorez notre catalogue pour trouver le café parfait qui éveille
+          vos sens et apporte une touche d'élégance à votre quotidien.
+        </p>
+        <a href="" class="cta-button2">Découvrez notre Boutique</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="presentation-product">Nos différents qualités de cafés</h2>
+    <div class="main">
+      <% cards.forEach( (card) => { %>
+      <article>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card" tabindex="0">
+              <div class="card_image">
+                <img class="card_size"
+                  src="/images/coffees/<%= card.reference %>.png"
+                  alt="coffee"
+                />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title"><%= card.name %></h2>
+                <div class="card_text">
+                  <h3><%= card.origine %></h3>
+                  <p>
+                    <%= card.description %>
+                  </p>
+                  <a href="/boutique/<%= card.id %>" class="cta-button">voir boutique</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <% }) %>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
