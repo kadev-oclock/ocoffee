@@ -14,7 +14,7 @@ router.get("/catalogue", mainController.catalog);
 
 
 // page boutique
-//router.get("/boutique", mainController.boutique);
+router.get("/boutique", mainController.boutique);
 // page products
 router.get("/products/:id", mainController.product);
 // page 404
