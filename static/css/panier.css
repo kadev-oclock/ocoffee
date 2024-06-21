@@ -114,3 +114,24 @@ td {
 .remove-item:hover {
   background-color: #e60000;
 }
+
+#thank-you {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#thank-you h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#thank-you p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}

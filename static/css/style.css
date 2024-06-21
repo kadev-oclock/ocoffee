@@ -315,7 +315,12 @@ nav {
   color: #ad8369;
   flex: 1 1 auto;
 }
-
+.product-presentation {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-top: 4em;
+}
 
 /* Catalogue Presentation Section Styles */
 .catalogue-presentation {

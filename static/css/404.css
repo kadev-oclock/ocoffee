@@ -1,67 +1,35 @@
-.container {
-  text-align: center;
+main {
+  margin: 50px 0;
 }
 
-.coffee-cup {
-  margin-bottom: 20px;
-}
-
-.cup {
-  width: 100px;
-  height: 150px;
-  background: #fff;
-  border-radius: 50px 50px 0 0;
+.coffee-animation {
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 0 auto;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
 }
 
-.coffee {
+.coffee-animation img {
   width: 100%;
-  height: 100px;
-  background: #8b4513;
-  position: absolute;
-  bottom: 0;
-  animation: steam 2s infinite;
+  animation: spill 2s ease-in-out forwards;
 }
 
-@keyframes steam {
-  0% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
-  100% {
-      transform: translateY(0);
-  }
+@keyframes spill {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
 }
 
-.message h1 {
-  font-size: 4em;
-  color: #8b4513;
-}
-
-.message h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.message p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.home-button {
+.btn {
+  display: inline-block;
+  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #8b4513;
+  background-color: #d2691e;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.home-button:hover {
-  background-color: #ad8369;
+.btn:hover {
+  background-color: #b35715;
 }
