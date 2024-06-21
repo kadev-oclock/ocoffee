@@ -53,37 +53,40 @@
         <a href="" class="cta-button2">Découvrez notre Boutique</a>
       </div>
     </div>
-  </section>
-  <section>
-    <h2 class="presentation-product">Nos différents qualités de cafés</h2>
-    <div class="main">
-      <% cards.forEach( (card) => { %>
-      <article>
-        <ul class="cards">
-          <li class="cards_item">
-            <div class="card" tabindex="0">
-              <div class="card_image">
-                <img class="card_size"
-                  src="/images/coffees/<%= card.reference %>.png"
-                  alt="coffee"
-                />
-              </div>
-              <div class="card_content">
-                <h2 class="card_title"><%= card.name %></h2>
-                <div class="card_text">
-                  <h3><%= card.origine %></h3>
-                  <p>
-                    <%= card.description %>
-                  </p>
-                  <a href="/product/<%= card.id %>" class="cta-button">voir boutique</a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </article>
-      <% }) %>
-    </div>
-  </section>
-</main>
-<%- include('partials/footer') %>
+    <section id="article">
+      <h1 style="background-image: url('/images/coffees/<%= oneCard.reference %>.png')">
+        <%= oneCard.name %>
+      </h1>
+    
+      <p><%= oneCard.description %>.</p>
+    
+      <table>
+        <tbody>
+          <tr>
+            <th>Origine</th>
+            <td><%= oneCard.origine %></td>
+          </tr>
+          <tr>
+            <th>Caractéristique principale</th>
+            <td><%= oneCard.caracteristique %></td>
+          </tr>
+          <tr>
+            <th>Prix au kg</th>
+            <td><%= oneCard.price %></td>
+          </tr>
+          <tr>
+            <th>Disponible actuellement</th>
+            <td><%= oneCard.disponible %></td>
+          </tr>
+          <tr>
+            <th>Référence SKU du produit</th>
+            <td><%= oneCard.reference %></td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <a href="/panier/add/<%= oneCard.id %>" class="button">ajouter au panier</a>
+    </section>
+    
+    </main>
+    <%- include('partials/footer') %>

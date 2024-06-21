@@ -25,12 +25,12 @@ const mainController = {
       client.end();
     }
   },
-  boutique: async (request, response) => {
+  product: async (request, response) => {
     //  résultat de mes promesses (résolution)
     try {
       // Je récupère le résultat d'une card
       const oneCard = await dataMapper.getOneCoffe(Number(request.params.id));
-      response.render("boutique", { oneCard });
+      response.render("products", { oneCard });
       // Ici, je renvoie la vue et les données associées
     } catch (error) {
       response.status(500).send("Erreur côté serveur pour récupérer une card");
